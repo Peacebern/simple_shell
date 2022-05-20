@@ -7,13 +7,13 @@
 
 void free_array(char **array)
 {
-	size_t i;
+	size_t i = 0;
 
-	for (i = 0; array[i] != '\0'; i++)
+	while(array[i])
 	{
 		free(array[i]);
+		i++;
 	}
-
 	free(array);
 
 }
